@@ -1,5 +1,5 @@
 {
-    "name": "Allumer LED Ultrason",
+    "name": "Tuto 1 Allumer LED Ultrason",
     "description": "",
     "dependencies": {
         "core": "*",
