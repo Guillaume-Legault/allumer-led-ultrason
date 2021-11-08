@@ -5,13 +5,45 @@ basic.forever(function () {
     DigitalPin.P1,
     PingUnit.Centimeters
     )
-    if (distance < 25) {
+    if (distance > 25) {
         basic.showLeds(`
             # . . . .
             # . . . .
             # . . . .
             # . . . .
             # . . . .
+            `)
+    } else if (distance > 20) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (distance > 15) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (distance > 10) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (distance > 5) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
             `)
     } else {
         basic.showLeds(`
@@ -20,42 +52,6 @@ basic.forever(function () {
             . . . . .
             . . . . .
             . . . . .
-            `)
-    }
-    if (distance < 20) {
-        basic.showLeds(`
-            # # . . .
-            # # . . .
-            # # . . .
-            # # . . .
-            # # . . .
-            `)
-    }
-    if (distance < 15) {
-        basic.showLeds(`
-            # # # . .
-            # # # . .
-            # # # . .
-            # # # . .
-            # # # . .
-            `)
-    }
-    if (distance < 10) {
-        basic.showLeds(`
-            # # # # .
-            # # # # .
-            # # # # .
-            # # # # .
-            # # # # .
-            `)
-    }
-    if (distance < 5) {
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
             `)
     }
 })
